@@ -1,3 +1,5 @@
+package ua.yelisieiev;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -68,8 +70,8 @@ public class ReflectionsTest {
     @Test
     public void test_ShowFinalMethodSignatures() throws NoSuchFieldException, IllegalAccessException {
         List<String> methodsSignaturesList = reflections.getFinalMethodsSignatures(new TestClass());
-        assertTrue(methodsSignaturesList.remove("protected final int ReflectionsTest$TestClass.getSum(int,int)"));
-        assertTrue(methodsSignaturesList.remove("public final java.lang.String ReflectionsTest$TestClass.getHello()"));
+        assertTrue(methodsSignaturesList.remove("protected final int ua.yelisieiev.ReflectionsTest$TestClass.getSum(int,int)"));
+        assertTrue(methodsSignaturesList.remove("public final java.lang.String ua.yelisieiev.ReflectionsTest$TestClass.getHello()"));
         assertEquals(0, methodsSignaturesList.size());
     }
 
